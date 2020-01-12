@@ -24,9 +24,9 @@ namespace TTAssignment.Data
         public InMemoryEmployeeData()
         {
             lstEmployee = new List<Employee>() { new Employee { FirstName = "Vivek", LastName = "Gaur", EmployeeId = 1,
-                EmpType = EmployeeType.Permanent, DOB = new DateTime(1985, 09, 19) },
+                EmpType = EmployeeType.Permanent},
             new Employee { FirstName = "Arjun", LastName = "Rampal", EmployeeId = 2,
-                EmpType = EmployeeType.Contractor, DOB = new DateTime(1981, 08, 26)} };
+                EmpType = EmployeeType.Contractor} };
         }
 
         public Employee Add(Employee newemployee)
