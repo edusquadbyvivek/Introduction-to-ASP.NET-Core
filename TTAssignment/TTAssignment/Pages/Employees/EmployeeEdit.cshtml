@@ -1,0 +1,28 @@
+﻿@page "{EmployeeId:int?}"
+@model TTAssignment.Pages.Employees.EmployeeEditModel
+@{
+    ViewData["Title"] = "EmployeeEdit";
+}
+
+<h2>EmployeeEdit</h2>
+<form method="post">
+    <input type="hidden" asp-for="Employee.EmployeeId" />
+
+    <div class="form-group">
+        <label asp-for="Employee.FirstName"></label>
+        <input asp-for="Employee.FirstName" class="form-control" />
+        <span class="text-danger" asp-validation-for="Employee.FirstName"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Employee.LastName"></label>
+        <input asp-for="Employee.LastName" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Employee.EmpType"></label>
+        <select class="form-control" asp-for="Employee.EmpType" asp-items="Model.EmpTypes">
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

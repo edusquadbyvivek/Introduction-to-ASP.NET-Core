@@ -1,0 +1,39 @@
+﻿@page
+@model EmployeelistModel
+@{
+}
+<h1>@Model.EmployeeHeader</h1>
+
+<form method="get" >
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    @foreach( var emp in Model.lstEmployees)
+    {
+    <tr>
+        <td>@emp.FirstName</td>
+        <td>@emp.LastName</td>
+        <td>@emp.EmployeeId</td>
+        <td>
+            <a class="btn btn-lg" asp-page="./EmployeeDetail" asp-route-EmployeeId="@emp.EmployeeId">
+                <i class=" = glyphicon glyphicon-zoom-in"></i>
+            </a>
+            <a class="btn btn-lg" asp-page="./EmployeeEdit" asp-route-EmployeeId="@emp.EmployeeId">
+                <i class=" = glyphicon glyphicon-edit"></i>
+            </a>
+        </td>
+    </tr>
+    }
+
+</table>
+<a asp-page="./EmployeeEdit" class="btn btn-primary"> Add Employee</a>

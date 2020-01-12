@@ -1,0 +1,31 @@
+﻿@page
+@model TTAssignment.Pages.Employees.EmployeeDetailModel
+@{
+    ViewData["Title"] = "EmployeeDetail";
+}
+
+<h2>EmployeeDetail</h2>
+<div>
+    Employee-ID : @Model.employee.EmployeeId;
+</div>
+<div>
+    FirstName : @Model.employee.FirstName;
+</div>
+<div>
+    LastName: @Model.employee.LastName;
+</div>
+<div>
+    Date of Brith : @Model.employee.DOB;
+</div>
+<div>
+    Type : @Model.employee.EmpType;
+</div>
+
+@if(Model.EmployeeSavedMsg != null)
+{
+    <div class="alert alert-info">@Model.EmployeeSavedMsg</div>
+}
+
+<a  asp-page="./Employeelist" class="btn-primary"> All Employees</a>
+
+
