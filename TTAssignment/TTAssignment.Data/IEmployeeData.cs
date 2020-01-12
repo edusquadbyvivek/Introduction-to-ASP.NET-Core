@@ -18,6 +18,7 @@ namespace TTAssignment.Data
 
         Employee Delete(int id);
         int Commit();
+        int EmployeeCount();
     }
 
     

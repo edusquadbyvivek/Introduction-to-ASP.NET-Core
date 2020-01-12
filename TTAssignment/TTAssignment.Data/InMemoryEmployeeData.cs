@@ -39,6 +39,11 @@ namespace TTAssignment.Data
             return emp;
         }
 
+        public int EmployeeCount()
+        {
+            return lstEmployee.Count();
+        }
+
         public IEnumerable<Employee> GetAll()
         {
             return from emp in lstEmployee

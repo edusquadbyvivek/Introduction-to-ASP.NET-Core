@@ -35,6 +35,11 @@ namespace TTAssignment.Data
             return emp;
         }
 
+        public int EmployeeCount()
+        {
+            return db.Employees.Count();
+        }
+
         public IEnumerable<Employee> GetAll()
         {
             var query = from e in db.Employees

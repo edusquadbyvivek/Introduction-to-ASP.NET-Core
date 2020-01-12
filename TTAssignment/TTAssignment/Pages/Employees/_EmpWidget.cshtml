@@ -1,0 +1,26 @@
+﻿@using TTAssignment.Core
+@model Employee
+
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3>@Model.FirstName</h3>
+    </div>
+    <div class="panel-body">
+        <span>LastName : @Model.LastName</span>
+        <span>EmpType : @Model.EmpType</span>
+        <span>EmpId : @Model.EmployeeId</span>
+    </div>
+    <div class=" panel-footer">
+        <a class="btn btn-lg" asp-page="./EmployeeDetail" asp-route-EmployeeId="@Model.EmployeeId">
+            <i class=" = glyphicon glyphicon-zoom-in"></i>
+        </a>
+        <a class="btn btn-lg" asp-page="./EmployeeEdit" asp-route-EmployeeId="@Model.EmployeeId">
+            <i class=" = glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-lg" asp-page="./Delete" asp-route-EmployeeId="@Model.EmployeeId">
+            <i class=" = glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+
+</div>
