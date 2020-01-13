@@ -1,6 +1,8 @@
 ﻿@model int
-
+@if (User.Identity.IsAuthenticated)
+{
     <div class="well">
         There are @Model employees available in the System. <a asp-page="/Employees/Employeelist"> Here is the list..</a>
     </div>
+}
 
