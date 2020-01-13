@@ -35,9 +35,9 @@ namespace TTAssignment
 
             // Uncomment the below line & comment line 39 to run the app using 
             // In memory data.
-            //services.AddScoped<IEmployeeData, InMemoryEmployeeData>();
+            services.AddScoped<IEmployeeData, InMemoryEmployeeData>();
 
-            services.AddScoped<IEmployeeData, SqlEmployeeData>();
+            //services.AddScoped<IEmployeeData, SqlEmployeeData>();
 
 
             services.Configure<CookiePolicyOptions>(options =>
@@ -49,14 +49,6 @@ namespace TTAssignment
 
             services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
             .AddAzureAD(options => Configuration.Bind("AzureAd", options));
-
-            //services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
-            //{
-            //    options.Authority = options.Authority + "/v2.0/";         // Microsoft identity platform
-
-            //    options.TokenValidationParameters.ValidateIssuer = false; // accept several tenants (here simplified)
-            //});
-
 
             services.AddMvc(options =>
             {

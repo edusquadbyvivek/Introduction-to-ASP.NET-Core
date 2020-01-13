@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTAssignment", "TTAssignment\TTAssignment.csproj", "{5C158669-5DA3-46C8-960E-6D439AAEA9F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTAssignment", "TTAssignment\TTAssignment.csproj", "{5C158669-5DA3-46C8-960E-6D439AAEA9F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTAssignment.Core", "TTAssignment.Core\TTAssignment.Core.csproj", "{87128526-4D43-48BC-882C-3A73023EFD86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTAssignment.Core", "TTAssignment.Core\TTAssignment.Core.csproj", "{87128526-4D43-48BC-882C-3A73023EFD86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTAssignment.Data", "TTAssignment.Data\TTAssignment.Data.csproj", "{AFDE4112-6202-4BA1-AF15-696E20B3E49D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTAssignment.Data", "TTAssignment.Data\TTAssignment.Data.csproj", "{AFDE4112-6202-4BA1-AF15-696E20B3E49D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{266B06A9-E540-4FCB-B8D6-6BB6264A0AD8}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
