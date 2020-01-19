@@ -42,5 +42,32 @@ namespace TTAssignmentUnitTests
             Assert.AreEqual(_employeedata.GetEmployee(3), null);
 
         }
+
+        [TestMethod]
+        public void InMemoryEmployeehasData_Update()
+        {
+            //Arrange
+            TTAssignment.Core.Employee Emp = new TTAssignment.Core.Employee
+            {
+                FirstName = "First",
+                LastName = "Last",
+                EmpType = TTAssignment.Core.EmployeeType.Permanent
+            };
+            _employeedata.Add(Emp);
+            TTAssignment.Core.Employee UpdatedEmp = new TTAssignment.Core.Employee
+            {
+                FirstName = "Second",
+                LastName = "Last",
+                EmpType = TTAssignment.Core.EmployeeType.Permanent,
+                EmployeeId = Emp.EmployeeId
+            };
+
+            //Act
+            _employeedata.Update(UpdatedEmp);
+
+            //Assert
+            Assert.AreEqual(_employeedata.GetEmployee(Emp.EmployeeId).FirstName, "Second");
+
+        }
     }
 }
