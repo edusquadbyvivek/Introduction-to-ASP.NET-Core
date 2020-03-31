@@ -10,4 +10,4 @@ In case of running the application aganist SQL Server, Please follow the below s
 	Open the command prompt, go to folder TTAssingment.Data & Run 'dotnet ef database update -s ..\TTAssignment\TTAssignment.csproj'
 
 Application has user Authentication with my Azure Active directory.
-Kindly use Username as 'testtriangle@contosoengineerings.onmicrosoft.com', For security reasons I have sent the password in email.
+Please write an email to edusquadbyvivek@gmail.com in order to get the password.
